@@ -16,7 +16,7 @@ const Products = () => {
         fetch("https://dummyjson.com/products")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data)
+                console.log(data);
                 setProducts(data.products);
                 setAllProducts(data.products);
                 setOriginalProducts(data.products);
@@ -60,8 +60,8 @@ const Products = () => {
     };
 
     const handleReset = () => {
-        setSort(""); // Clear the sort value
-        setProducts(originalProducts); // Reset products to the original list
+        setSort("");
+        setProducts(originalProducts);
     };
 
     // Handle category filter
@@ -70,7 +70,7 @@ const Products = () => {
         setFilter(selectedCategory);
 
         if (selectedCategory === "") {
-            setProducts(originalProducts); // If no category selected, show all products
+            setProducts(originalProducts);
         } else {
             const filteredProducts = originalProducts.filter(product =>
                 product.category.toLowerCase() === selectedCategory.toLowerCase()
@@ -87,7 +87,7 @@ const Products = () => {
                     placeholder="Search here"
                     value={searchValue}
                     onChange={handleSearch}
-                    className="bg-gray-200 outline-none border border-gray-300 px-3 w-96 rounded-full py-2"
+                    className="bg-gray-100 outline-none border border-gray-500 px-3 w-64 rounded-full py-2"
                 />
             </div>
 

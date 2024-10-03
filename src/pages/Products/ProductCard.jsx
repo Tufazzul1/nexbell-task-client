@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="relative p-4 w-full bg-white border border-gray-200 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
-            <img src={images} className="w-full h-48 object-cover rounded-t-lg" />
+            <img src={images[0]} className="w-full h-48 object-cover rounded-t-lg" />
             <div className="absolute top-2 right-2 flex space-x-3">
                 <button
                     aria-label="Add to wishlist"
