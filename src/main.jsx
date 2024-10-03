@@ -11,6 +11,7 @@ import Products from './pages/Products/Products';
 import AddProduct from './components/AddProduct';
 import EditProduct from './components/EditProduct';
 import ProductDetails from './pages/Products/ProductDetails';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -29,17 +30,23 @@ const router = createBrowserRouter([
         path: '/products/:id',
         element: <ProductDetails></ProductDetails>
       },
-      {
-        path : 'products/add',
-        element : <AddProduct></AddProduct>
-      },
-      {
-        path : 'products/edit',
-        element : <EditProduct></EditProduct>
-      },
 
     ]
   },
+  {
+    path:"/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "products/add",
+        element: <AddProduct></AddProduct>
+      },
+      {
+        path: "products/edit",
+        element: <EditProduct></EditProduct>
+      },
+    ]
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
