@@ -21,7 +21,7 @@ const Dashboard = () => {
     }, [sidebarOpen]);
 
     return (
-        <div className="flex flex-col md:flex-row min-h-screen">
+        <div className="flex flex-col md:flex-row min-h-screen grow">
             {/* Sidebar */}
             <div
                 className={`sidebar fixed z-20 top-0 left-0 h-full bg-green-200 text-gray-600 p-5 transition-transform duration-300 ease-in-out ${sidebarOpen ? "translate-x-0" : "-translate-x-full"

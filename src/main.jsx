@@ -12,6 +12,7 @@ import AddProduct from './components/AddProduct';
 import EditProduct from './components/EditProduct';
 import ProductDetails from './pages/Products/ProductDetails';
 import Dashboard from './pages/Dashboard/Dashboard';
+import UpdateProduct from './components/UpdateProduct';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "products/add",
         element: <AddProduct></AddProduct>
+      },
+      {
+        path: "products/edit/update/:id",
+        element: <UpdateProduct></UpdateProduct>
       },
       {
         path: "products/edit",
