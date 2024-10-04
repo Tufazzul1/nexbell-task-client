@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdShoppingCartCheckout } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
+import { BounceLoader } from "react-spinners";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -28,7 +29,7 @@ const ProductDetails = () => {
     ).toFixed(2);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return   <div><BounceLoader className="flex justify-center text-3xl" /></div>;
     }
 
     if (!product) {

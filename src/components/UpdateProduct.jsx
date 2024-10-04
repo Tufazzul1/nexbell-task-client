@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import ProductForm from "./ProductForm";
 import { useEffect, useState } from "react";
+import { BounceLoader } from "react-spinners";
 
 const UpdateProduct = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const UpdateProduct = () => {
   console.log(data)
 
   if (loading) {
-    return <div>Loading...</div>;
+    return  <div><BounceLoader className="flex justify-center text-3xl" /></div>
   }
 
   return (

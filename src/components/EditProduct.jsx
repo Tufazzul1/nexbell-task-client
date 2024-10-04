@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useState, useEffect } from "react";
+import { BounceLoader } from "react-spinners";
 
 const EditProduct = () => {
     const [data, setData] = useState(null);
@@ -66,7 +67,7 @@ const EditProduct = () => {
 
     if (loading) {
         return (
-            <div>Loading...</div>
+            <div><BounceLoader className="flex justify-center text-3xl" /></div>
         )
     }
 
