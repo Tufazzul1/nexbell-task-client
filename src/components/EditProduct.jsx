@@ -67,7 +67,7 @@ const EditProduct = () => {
 
     if (loading) {
         return (
-            <div><BounceLoader className="flex justify-center text-3xl" /></div>
+            <div className="flex justify-center items-center"><BounceLoader className="text-3xl" /></div>
         )
     }
 

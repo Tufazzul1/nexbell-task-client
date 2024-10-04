@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import { BounceLoader } from "react-spinners";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -78,6 +79,10 @@ const Products = () => {
             setProducts(filteredProducts);
         }
     };
+
+    if (loading) {
+        return   <div className="flex justify-center items-center"><BounceLoader className="text-3xl" /></div>;
+    }
 
     return (
         <div>

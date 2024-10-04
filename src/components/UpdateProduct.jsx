@@ -26,7 +26,7 @@ const UpdateProduct = () => {
   console.log(data)
 
   if (loading) {
-    return  <div><BounceLoader className="flex justify-center text-3xl" /></div>
+    return  <div className="flex justify-center items-center"><BounceLoader className="text-3xl" /></div>
   }
 
   return (
